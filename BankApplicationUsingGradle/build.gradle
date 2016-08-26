@@ -3,14 +3,12 @@ apply plugin :'java'
 //apply plugin : 'application'
 
 apply plugin: 'sonar-runner'
-//repositories
-//{
-  // maven
- //  {
-
- //  }
-//}
-repositories { jcenter() }
+repositories {
+  mavenCentral()
+  maven {
+  url "https://repository-achartengine.forge.cloudbees.com/snapshot/"
+  }
+}
 dependencies { testCompile "org.mockito:mockito-core:1.+" }
 
 dependencies {
